@@ -74,11 +74,11 @@ fs.existsSync('./session.json') && conn.loadAuthInfo('./session.json')
 //conn.connectOptions.agent = ProxyAgent ('http://1.0.180.120:8080')
 conn.connect();
 
-conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @muh_ahsan1999`))
+conn.on('user-presence-update', json => console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @itspapoy`))
 conn.on('message-status-update', json =>
 {
    const participant = json.participant ? ' (' + json.participant + ')' : '' // participant exists when the message is from a group
-   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by @Itsmeiky`)
+   console.log(`[ ${moment().format("HH:mm:ss")} ] => bot by AnxietyBot`)
 })
 
 conn.on('message-new', async(m) =>
@@ -369,7 +369,7 @@ var gh = text.split(".quotemaker ")[1];
     })
 }
 if (text.includes('.nulis2')){
-  var teks = text.replace(/%nulis2 /, '')
+  var teks = text.replace(/.nulis2 /, '')
     axios.get(`https://mhankbarbars.herokuapp.com/nulis?text=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -381,7 +381,7 @@ if (text.includes('.nulis2')){
     })
 }
 if (text.includes('.nekonime')){
-  var aris = text.replace(/ /, '')
+  var aris = text.replace(/.nekonime /, '')
     axios.get('https://arugaz.herokuapp.com/api/nekonime')
     .then((res) => {
       imageToBase64(res.data.result)
@@ -394,7 +394,7 @@ if (text.includes('.nekonime')){
     })
 }
 if (text.includes('.ttp2')){
-  var teks = text.replace(/%ttp /, '')
+  var teks = text.replace(/.ttp2 /, '')
     axios.get(`https://mhankbarbars.herokuapp.com/api/text2image?text=${teks}&apiKey=N2Ws9kp3KTDYtry5Jjyz`).then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -554,7 +554,7 @@ if (text.includes('.nsfwneko')){
     })
 }
 if (text.includes('.nsfwtrap')){
-  var teks = text.replace(/.nsfwneko /, '')
+  var teks = text.replace(/.nsfwtrap /, '')
     axios.get(`https://tobz-api.herokuapp.com/api/nsfwtrap`).then((res) => {
       imageToBase64(res.data.result)
         .then(
@@ -665,7 +665,7 @@ conn.sendMessage(id, 'Succes Change Description Group' ,MessageType.text, { quot
 }
 if (text.includes('.creator')){
 conn.sendMessage(id, {displayname: "Jeff", vcard: vcard}, MessageType.contact)
-conn.sendMessage(id, 'Ingin donasi untuk masukin Bot ke group?, chat Owner :D', MessageType.text, { quoted: m })
+conn.sendMessage(id, 'nihh nomer ownernya di sv yaa nanti di svbck koo :D', MessageType.text, { quoted: m })
 }
 if (text.includes(".xvideo")){
 const teks = text.replace(/.xvideo /, "")
